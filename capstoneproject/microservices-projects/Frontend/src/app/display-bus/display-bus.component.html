@@ -1,0 +1,54 @@
+
+
+<div class="container my-5">
+  <div class="text-center my-5">
+    <div class="container mt-5 pt-4">
+  <h2 class="fw-bold text-danger border-bottom border-3 d-inline-block pb-2">Find Your Bus</h2>
+  </div>
+  </div>
+
+  <div class="mb-4">
+    <div class="search-box">
+    <label for="search" class="form-label">Search:</label>
+    <input type="text" class="form-control" id="search"  [(ngModel)]="searchQuery" (ngModelChange)="filterBuses()" />
+  </div>
+  </div>
+  
+
+
+  <div class="bus-container">
+  <div *ngFor="let bus of filteredBuses" class="bus-card">
+    
+    
+    <img [src]="bus.image" alt="{{bus.start}} to {{bus.destination}}" class="bus-image">
+
+   
+    <h3 class="bus-title">{{ bus.start }} → {{ bus.destination }}</h3>
+
+    <p class="bus-ratings">⭐ {{ bus.ratings }}/10</p>
+
+   
+    <p class="bus-info">Departure: {{ bus.departureTime }}</p>
+
+    <p class="bus-info">Date: {{ bus.date }}</p>
+
+
+    <p class="bus-info">Available Seats: {{ bus.seats }}</p>
+
+    <p class="bus-info">Ticket Price: {{ bus.price }}</p>
+
+   
+    <button class="book-btn" (click)="bookTicket(bus.bus_id)">Book Ticket</button>
+  </div>
+</div>
+
+
+
+  <ng-template #noResults>
+    <div class="alert alert-info" role="alert">
+      No bus routes match your search.
+    </div>
+  </ng-template>
+
+  
+</div>

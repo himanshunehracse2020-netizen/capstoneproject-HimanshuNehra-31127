@@ -1,0 +1,67 @@
+services:
+
+  userloginservice:
+
+    image: userloginimage
+    container_name: userlogincontainer
+    ports:
+      - "5003:5003"
+   
+    volumes:
+          - ./instance:/app/instance
+    networks:
+          - mynetwork
+
+  busscheduleservice:
+    
+    image: busscheduleimage
+    container_name: busschedulecontainer
+    ports:
+      - "5002:5002"
+    
+    volumes:
+          - ./instance:/app/instance
+
+    networks:
+          - mynetwork
+
+
+  reservationservice:
+    
+    image: reservationimage
+    container_name: reservationcontainer
+    ports:
+      - "5001:5001"
+    
+    volumes:
+          - ./instance:/app/instance
+  
+    networks:
+          - mynetwork
+
+  angularservice:
+       image: frontimage
+       container_name: frontendcontainer
+      
+       ports:
+          - "4200:80"
+       volumes:
+          - ./instance:/app/instance
+       networks:
+          - mynetwork
+  gateway:
+       image: gatewayimage
+       container_name: gatewaycontainer
+
+       ports:
+          - "5000:5000"
+
+       networks:
+            - mynetwork
+
+
+
+
+networks:
+    mynetwork:
+          driver: bridge 

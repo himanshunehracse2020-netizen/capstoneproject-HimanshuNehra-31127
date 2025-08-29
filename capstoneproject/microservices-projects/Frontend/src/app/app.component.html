@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Ticket Reservation System</title>
+    
+    <style>
+        
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        .navbar-nav .nav-link {
+            font-size: 1.1rem;
+            margin-right: 15px; 
+        }
+    </style>
+</head>
+<body>
+  
+    <nav *ngIf ="currentUrl.startsWith('/user')"  class="navbar navbar-expand-lg navbar-dark bg-danger shadow fixed-top" style="background-color: #800020;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Bus Ticket Reservation System</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto"> 
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/user/display_ticket" routerLinkActive="active">Dispaly Booking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/user/display_bus" routerLinkActive="active">Display Routes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/" routerLinkActive="active">Logout</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <nav *ngIf ="currentUrl.startsWith('/admin')"  class="navbar navbar-expand-lg navbar-dark bg-danger shadow fixed-top" style="background-color: #800020;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Bus Ticket Reservation System</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto"> 
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/admin/add_bus" routerLinkActive="active">Add Routes</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/admin/admin_display_bus" routerLinkActive="active">Display Routes</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/" routerLinkActive="active">Logout</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+      <div >
+        <router-outlet></router-outlet>
+        </div>
+    
+
+   
+</body>
+</html>

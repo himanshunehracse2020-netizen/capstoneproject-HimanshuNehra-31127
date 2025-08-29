@@ -1,0 +1,72 @@
+/* Full Background */
+.login-bg {
+  background: linear-gradient(135deg, #2193b0, #6dd5ed, #1e3c72);
+}
+
+/* Card Container */
+.login-card {
+  width: 420px;
+  background: #ffffffcc;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+.login-header {
+  background-color: #0d6efd;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border-radius: 1rem 1rem 0 0;
+}
+
+/* Body */
+.login-body {
+  background-color: #f8f9fa;
+  border-radius: 0 0 1rem 1rem;
+}
+
+/* Input Fields */
+.glowing-input {
+  border: 2px solid #ccc;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Glow only when typed */
+.glowing-input:not(:placeholder-shown) {
+  border-color: #0d6efd !important;
+  box-shadow: 0 0 10px rgba(13, 110, 253, 0.6);
+}
+
+.glowing-input:placeholder-shown {
+  border-color: #ccc !important;
+  box-shadow: none !important;
+}
+
+/* Buttons */
+.back-btn {
+  background-color: #6c757d;
+  color: white;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 0.5rem;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background-color: #5a6268;
+}
+
+.login-btn {
+  background-color: #0d6efd;
+  color: white;
+  font-weight: 600;
+  padding: 8px 30px;
+  border-radius: 0.5rem;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #0b5ed7;
+}

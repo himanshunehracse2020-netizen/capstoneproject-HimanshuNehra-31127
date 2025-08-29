@@ -1,0 +1,67 @@
+
+
+<div class="container mt-5">
+  <div class="container mt-5 pt-4">
+  <h2 class="text-center text-danger">Book Tickets</h2>
+  </div>
+  <hr>
+
+  
+  <div class="mb-3">
+    <label class="form-label fw-bold">Number of Tickets</label>
+    <input type="number" [(ngModel)]="numTickets" (change)="generateForms()" min="1" class="form-control w-25">
+  </div>
+
+ 
+  <div *ngFor="let p of ticket; let i = index" class="card p-3 mb-3 shadow-sm">
+    <h5 class="text-primary">Passenger {{ i + 1 }}</h5>
+    <div class="row g-3">
+      
+      
+      <div class="col-md-6">
+        <label class="form-label">Name</label>
+        <input type="text" [(ngModel)]="p.passenger_name" class="form-control" placeholder="Enter name">
+      </div>
+      
+      
+      <div class="col-md-6">
+        <label class="form-label">Age</label>
+        <input type="number" [(ngModel)]="p.passenger_age" class="form-control" placeholder="Enter age">
+      </div>
+      
+      
+      <div class="col-md-6">
+        <label class="form-label">Email</label>
+        <input type="email" [(ngModel)]="p.email" class="form-control" placeholder="Enter email">
+      </div>
+      
+      
+      <div class="col-md-6">
+        <label class="form-label">Phone</label>
+        <input type="tel" [(ngModel)]="p.phone" class="form-control" placeholder="Enter phone no">
+      </div>
+      
+      
+      <div class="col-md-6">
+        <label class="form-label">Gender</label>
+        <select [(ngModel)]="p.gender" class="form-select">
+          <option value="">Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      
+      <div class="col-md-12">
+        <label class="form-label">Address</label>
+        <textarea [(ngModel)]="p.address" class="form-control" placeholder="Enter address"></textarea>
+      </div>
+      
+    </div>
+  </div>
+
+  
+  <button class="btn btn-danger w-100 mt-3" (click)="bookTicket()">Confirm Booking</button>
+</div>
+
+   

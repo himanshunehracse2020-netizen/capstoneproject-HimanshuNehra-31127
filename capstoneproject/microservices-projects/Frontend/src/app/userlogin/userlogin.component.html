@@ -1,0 +1,42 @@
+
+
+<div class="d-flex justify-content-center align-items-center vh-100 login-bg">
+
+  
+  <div class="card login-card">
+    
+   
+    <div class="card-header text-center login-header">
+      👤 User Login
+    </div>
+
+ 
+    <div class="card-body p-4 login-body">
+      <form>
+   
+        <div class="mb-3">
+          <label for="username" class="form-label fw-semibold">Enter Username:</label>
+          <input type="text" id="username" [(ngModel)]="user.username" name="username" class="form-control glowing-input" 
+                 placeholder="Enter your username" required>
+        </div>
+
+    
+        <div class="mb-3">
+          <label for="password" class="form-label fw-semibold">Enter Password:</label>
+          <input type="password" id="password" [(ngModel)]="user.password" name="password" class="form-control glowing-input" 
+                 placeholder="Enter your password" required>
+        </div>
+
+    
+        <div class="d-flex justify-content-between mt-4">
+          <button type="button" class="btn back-btn" routerLink="/" routerLinkActive="active">
+            ⬅ Back
+          </button>
+          <button (click)="userlogin()" type="submit" class="btn login-btn">
+            Login
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+
+<!-- Full Screen Background -->
+<div class="d-flex justify-content-center align-items-center vh-100 admin-login-bg">
+
+  <!-- Card Container -->
+  <div class="card admin-login-card">
+    
+    <!-- Card Header -->
+    <div class="card-header text-center admin-login-header">
+      🔑 Admin Login
+    </div>
+
+    <!-- Card Body -->
+    <div class="card-body p-4 admin-login-body">
+      <form>
+        <!-- Username -->
+        <div class="mb-3">
+          <label for="admin-username" class="form-label fw-semibold">Enter Username:</label>
+          <input type="text" id="admin-username" [(ngModel)]="username" name="username" class="form-control admin-input" 
+                 placeholder="Enter admin username" required>
+        </div>
+
+        <!-- Password -->
+        <div class="mb-3">
+          <label for="admin-password" class="form-label fw-semibold">Enter Password:</label>
+          <input type="password" id="admin-password" [(ngModel)]="password" name="password"  class="form-control admin-input" 
+                 placeholder="Enter admin password" required>
+        </div>
+
+        <!-- Buttons -->
+        <div class="d-flex justify-content-between mt-4">
+          <button type="button" class="btn admin-back-btn" routerLink="/" routerLinkActive="active">
+            ⬅ Back
+          </button>
+          <button (click)="adminlogin()" type="submit" class="btn admin-login-btn">
+            Login
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

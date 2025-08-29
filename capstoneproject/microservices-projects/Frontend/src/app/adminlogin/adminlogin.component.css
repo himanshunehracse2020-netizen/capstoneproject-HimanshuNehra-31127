@@ -1,0 +1,72 @@
+/* Full Background */
+.admin-login-bg {
+  background: linear-gradient(135deg, #ff512f, #dd2476, #ff7e5f);
+}
+
+/* Card Container */
+.admin-login-card {
+  width: 420px;
+  background: #ffffffcc;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Header */
+.admin-login-header {
+  background-color: #e63946;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border-radius: 1rem 1rem 0 0;
+}
+
+/* Body */
+.admin-login-body {
+  background-color: #fdfdfd;
+  border-radius: 0 0 1rem 1rem;
+}
+
+/* Input Fields */
+.admin-input {
+  border: 2px solid #ccc;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Glow only when typed */
+.admin-input:not(:placeholder-shown) {
+  border-color: #e63946 !important;
+  box-shadow: 0 0 10px rgba(230, 57, 70, 0.6);
+}
+
+.admin-input:placeholder-shown {
+  border-color: #ccc !important;
+  box-shadow: none !important;
+}
+
+/* Buttons */
+.admin-back-btn {
+  background-color: #6c757d;
+  color: white;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 0.5rem;
+  transition: 0.3s;
+}
+
+.admin-back-btn:hover {
+  background-color: #5a6268;
+}
+
+.admin-login-btn {
+  background-color: #e63946;
+  color: white;
+  font-weight: 600;
+  padding: 8px 30px;
+  border-radius: 0.5rem;
+  transition: 0.3s;
+}
+
+.admin-login-btn:hover {
+  background-color: #c5303b;
+}

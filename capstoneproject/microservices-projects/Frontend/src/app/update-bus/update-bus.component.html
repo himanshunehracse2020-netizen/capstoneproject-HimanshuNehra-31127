@@ -1,0 +1,57 @@
+
+
+
+<div class="container mt-5">
+  <div class="container mt-5 pt-4">
+  <h2 class="text-center text-danger">UPDATE BUS</h2>
+  </div>
+  <hr>
+    
+      <div class="col-md-6">
+        <label class="form-label">Bus Start Location</label>
+        <input type="text" [(ngModel)]="bus.start" class="form-control" placeholder="Enter Start Location">
+      </div>
+      
+      
+      <div class="col-md-6">
+        <label class="form-label">Bus Destination</label>
+        <input type="text" [(ngModel)]="bus.destination" class="form-control" placeholder="Enter destination">
+      </div>
+      
+      
+      <div class="col-md-6">
+        <label class="form-label">Image</label>
+        <input type="text" [(ngModel)]="bus.image" class="form-control" placeholder="Enter image url">
+      </div>
+      
+      
+      <div class="col-md-6">
+        <label class="form-label">Ratings</label>
+        <input type="number" [(ngModel)]="bus.ratings" class="form-control" placeholder="Enter bus ratings">
+      </div>
+      
+      <div class="col-md-6">
+        <label class="form-label">Departure Time</label>
+        <input type="text" [(ngModel)]="bus.departureTime" class="form-control" placeholder="Enter departureTime">
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Seats Available</label>
+        <input type="number" [(ngModel)]="bus.seats" class="form-control" placeholder="Enter No of seat available">
+      </div>
+      
+      <div class="col-md-6">
+        <label class="form-label">Date</label>
+        <input type="text" [(ngModel)]="bus.date" class="form-control" placeholder="Enter date">
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Ticket Price</label>
+        <input type="number" [(ngModel)]="bus.price" class="form-control" placeholder="Enter price">
+      </div>
+      
+  </div>
+  
+  <button class="btn btn-danger w-100 mt-3" (click)="updatebus()">Update Bus</button>
+
+

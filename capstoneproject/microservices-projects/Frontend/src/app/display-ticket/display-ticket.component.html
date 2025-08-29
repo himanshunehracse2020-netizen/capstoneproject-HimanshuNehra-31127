@@ -1,0 +1,46 @@
+
+<div class="container">
+    <div class="text-center my-5">
+      <div class="container mt-5 pt-4">
+  <h2 class="fw-bold text-danger border-bottom border-3 d-inline-block pb-2">Booking History</h2>
+</div></div>
+
+  <div class="mb-4">
+  <div class="search-box">
+    <label for="search" class="form-label">Search by Passenger Name:</label>
+    <input
+      type="text" class="form-control"
+      id="search"
+      
+      [(ngModel)]="searchQuery"
+      (ngModelChange)="filterTickets()"
+    />
+  </div>
+  </div>
+  
+  <div class="booking-container">
+    <div *ngIf="filteredtickets.length > 0; else noResults">
+  <div *ngFor="let ticket of filteredtickets" class="booking-card">
+    
+    <h3 class="ticket-title">🎟 Ticket ID: {{ ticket.ticket_id }}</h3>
+    <p class="ticket-info"><strong>Passenger Name:</strong> {{ ticket.passenger_name }}</p>
+    <p class="ticket-info"><strong>Passenger Age:</strong> {{ ticket.passenger_age }}</p>
+
+    <div class="action-buttons">
+      <button class="cancel-btn" (click)="cancelTicket(ticket.ticket_id)">Cancel Ticket</button>
+      <button class="view-btn" (click)="viewDetails(ticket.ticket_id)">View Details</button>
+    </div>
+  </div>
+</div>
+</div>
+
+  
+
+  <ng-template #noResults>
+    <div class="no-results">
+      <p>No passenger tickets match your search.</p>
+    </div>
+  </ng-template>
+</div>
+
+

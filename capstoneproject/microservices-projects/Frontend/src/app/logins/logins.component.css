@@ -1,0 +1,41 @@
+
+.hero-section {
+  background: linear-gradient(135deg, #e63946, #1d3557);
+  padding: 50px 20px;
+  text-align: center;
+}
+
+
+.box-section {
+  margin-top: 50px;
+}
+
+.custom-card {
+  border-radius: 20px;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+  min-height: 300px; 
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+
+.admin-card {
+  border-top: 6px solid #e63946;
+}
+.user-card {
+  border-top: 6px solid #1d3557;
+}
+
+
+.btn {
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 1.1rem;
+}

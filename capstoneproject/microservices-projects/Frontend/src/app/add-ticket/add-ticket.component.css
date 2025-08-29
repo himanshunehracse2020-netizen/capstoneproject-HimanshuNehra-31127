@@ -1,0 +1,8 @@
+.card {
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+h5 {
+  font-weight: bold;
+}
